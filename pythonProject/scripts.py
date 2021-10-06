@@ -31,8 +31,8 @@ def readfiles(filenamelist):
         # ^ Uses Counter to find the most common word and then transforms the very first entry to list
         print('Appending all relevant values from {0}...'.format(filename2))
         filecontent = list()
-        filecontent.append(filename.split('.')[0])
-        filecontent.append(filename.split('.')[1])
+        filecontent.append(filename2.split('.')[0])
+        filecontent.append(filename2.split('.')[1])
         filecontent.append(mostcommon[0])
         filecontent.append(mostcommon[1])
         filecontent.append(wordcounter.index(mostcommon[0]) + 1)
