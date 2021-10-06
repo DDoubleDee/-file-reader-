@@ -14,7 +14,7 @@ def readfiles(filenamelist):
         if os.stat(filename).st_size == 0:  # Checks the size statistic of filename
             raise Exception('File {0} is empty'.format(filename2))
         print('Opening {0}...'.format(filename2))
-        file = open(filename, 'r')
+        file = open(filename, 'r', encoding='utf8')
         print('Reading lines in {0}...'.format(filename2))
         lines = file.readlines()
         linescount = 0
@@ -51,7 +51,7 @@ def writetext(filescontent):
         answer = input('Output file already exists, continue anyway? y/n')
         if answer == 'y':
             print('Creating output.txt file...')
-            file = open('output.txt', 'w')
+            file = open('output.txt', 'w', encoding='utf8')
             print('Writing into output.txt file...')
             for i in filescontent:
                 file.write('\n\nFile name: {0}\n'.format(i[0]))
@@ -66,7 +66,7 @@ def writetext(filescontent):
             print('Operation aborted')
     else:
         print('Creating output.txt file...')
-        file = open('output.txt', 'w')
+        file = open('output.txt', 'w', encoding='utf8')
         print('Writing into output.txt file...')
         for i in filescontent:
             file.write('\n\nFile name: {0}\n'.format(i[0]))
